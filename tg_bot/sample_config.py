@@ -44,7 +44,8 @@ class Config(object):
     API_OPENWEATHER = False #Get API_OPENWEATHER FROM OFFICAL SITE https://da.gd/VAW3
     AI_API_KEY = None # Coffeehouse chatbot api key, get one from https://coffeehouse.intellivoid.info/
     WALL_API = None # Get one from https://wall.alphacoders.com/api.php
-
+    INTRO_IMG = ' ' # The pic you want to show up on start
+    INTRO_TXT = None # The text you want to add in start 
 
 class Production(Config):
     LOGGER = True
