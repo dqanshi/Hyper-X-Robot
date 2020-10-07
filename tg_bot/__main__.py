@@ -14,7 +14,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \
-    ALLOW_EXCL, TOKEN
+    ALLOW_EXCL, TOKEN, INTRO_TXT
 from tg_bot.modules import ALL_MODULES
 from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
@@ -27,7 +27,6 @@ VERSION = "5.5.2"
 
 def vercheck() -> str:
     return str(VERSION)
-
 
 HELP_STRINGS = HELP_PANEL_STRING.HELP.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
@@ -130,7 +129,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("വേറെ ഒരു പണിയും ഇല്ലേ നിനക്ക്‌ ഒന്നും...😎")
+        update.effective_message.reply_text("Hey...You why are you itching ME...🙄 ")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -141,14 +140,15 @@ def send_start(bot, update):
         pass
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
-    text = "𝙃𝙚𝙮...{} 𝙃𝙤𝙬 𝙖𝙧𝙚 𝙮𝙤𝙪..."
-    text += "\n𝑀𝑦 𝑁𝑎𝑚𝑒 𝑖𝑠 {}... 𝐴 𝑃𝑜𝑤𝑒𝑟𝑓𝑢𝑙 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝑃𝑟𝑜𝐵𝑜𝑡 𝑤𝑖𝑡ℎ 𝑙𝑎𝑡𝑒𝑠𝑡 𝑓𝑒𝑎𝑡𝑢𝑟𝑒𝑠 𝑎𝑛𝑑 𝑒𝑎𝑠𝑖𝑒𝑟 𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠.... 𝑇ℎ𝑒 𝑛𝑖𝑔ℎ𝑡 𝑖𝑠 𝑓𝑢𝑙𝑙 𝑜𝑓 𝑑𝑎𝑟𝑘 𝑎𝑛𝑑 𝑡𝑒𝑟𝑟𝑜𝑟𝑠..." 
-    text += "\n\n𝐅𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐠𝐞𝐭 𝐦𝐞 𝐢𝐧𝐭𝐨 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩𝐬..."  
+    text = "𝐇𝐞𝐲 *{}* 𝒂𝒅𝒅 𝒎𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑"
+    text += "\n𝙸𝚊𝚖 {} 𝚊𝚗 𝚙𝚛𝚘𝚏𝚏𝚎𝚜𝚜𝚒𝚘𝚗𝚊𝚕 𝚋𝚘𝚝"
+    text += "\n𝗝𝗼𝗶𝗻 [𝗡𝗲𝘄𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗙𝗼𝗿 𝘂𝗽𝗱𝗮𝘁𝗲𝘀 𝗮𝗯𝗼𝘂𝘁 𝗺𝗲](https://t.me/universal_blazer)" 
+    text += "\n\n «*{}*»"  
 
-    keyboard = [[InlineKeyboardButton(text="🔰Help", callback_data="help_back"),InlineKeyboardButton(text="⚔️ Connect Group ⚔️", callback_data="main_connect")]]
-    keyboard += [[InlineKeyboardButton(text="💠Add Me💠",url="http://t.me/zoldycktmbot?startgroup=true"),InlineKeyboardButton(text="♻️Owner",url="https://telegram.dog/Imperialxx")]]
+    keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url=https://t.me/Universal_Blazer")]]
+    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username),InlineKeyboardButton(text="♻️Owner",url="tg://user?id={}".format(OWNER_ID))]]
 
-    update.effective_message.reply_photo(HELP_PANEL_STRING.ALLUKA_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo(HELP_PANEL_STRING.HYPER_X_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name),  INTRO_TXT ), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
 
 def m_connect_button(bot, update):
@@ -245,8 +245,8 @@ def get_help(bot: Bot, update: Update):
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Help",url="t.me/{}?start=help".format(bot.username)),
-                                                InlineKeyboardButton(text="💫Channel",url="https://telegram.dog/imperialxxxx")]]))
+                                                [[InlineKeyboardButton(text="✨Help",url="t.me/{}?start=help".format(bot.username)),
+                                                InlineKeyboardButton(text="💫Support",url="https://t.me/Universal_Blazer")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
@@ -579,4 +579,4 @@ if __name__ == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     # tbot.start(bot_token=TOKEN)
     main()
-    # LOGGER.info("Successfully loaded")
+    # LOGGER.info("Bot is started to running Pls join our updates channel for more updates")
