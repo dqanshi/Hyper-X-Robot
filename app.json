@@ -42,7 +42,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Dev (can use /py etc.)",
          "required": false,
-         "value": "988452336"
+         "value": "551290198"
       },
       "GBAN_LOGS": {
          "description": "Gban log channel, include the hyphen too: ex: -123456",
@@ -76,17 +76,17 @@
       "SUDO_USERS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "988452336"
+         "value": "551290198"
       },
       "SUPPORT_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": "988452336"
+         "value": "551290198"
       },
       "TIGER_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": "988452336"
+         "value": "551290198"
       },
       "TOKEN": {
          "description": "Your bot token.",
@@ -106,7 +106,7 @@
       "WHITELIST_USERS": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": "988452336"
+         "value": "551290198"
       }
    },
    "keywords": [
@@ -115,7 +115,7 @@
       "manager",
       "bot"
    ],
-   "logo": "https://telegra.ph/file/ebb3abf2d9acac205d061.jpg",
-   "name": "NIGHTLY ROBOT",
-   "repository": "https://github.com/santo-surviver/NightlyRobot2.0"
+   "logo": "https://telegra.ph/file/92c560a18419060b12332.jpg ",
+   "name": "Hyper-X-Robot",
+   "repository": "https://github.com/santo-surviver/Hyper-X-Robot "
 }
