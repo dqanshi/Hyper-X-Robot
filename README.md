@@ -4,7 +4,7 @@
 # Use at your own risk
 
 
-[Contact me](https://t.me/imperialxx)
+[Contact me](https://t.me/BetaPhoenix)
 
 
  Hint : Telegram is missing 
@@ -15,7 +15,7 @@ Click below to deploy
 
 
 
-[![phoenix](https://telegra.ph/file/326837d769c435d4b6400.jpg)]
+[phoenix](https://telegra.ph/file/92c560a18419060b12332.jpg)
 
 
 
