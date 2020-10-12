@@ -146,7 +146,7 @@ def send_start(bot, update):
     text += "\n\n «*{}*»"  
 
     keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨","url=https://t.me/BlazingSquad")]]
-    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username),InlineKeyboardButton(text="♻️Owner",url="tg://user?id=1103924091")]]
+    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username),InlineKeyboardButton(text="♻️Owner",https://t.me/jrjaiden)]]
 
     update.effective_message.reply_photo(HELP_PANEL_STRING.HYPER_X_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name),  INTRO_TXT ), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
@@ -246,7 +246,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="✨Help",url="t.me/{}?start=help".format(bot.username)),
-                                                InlineKeyboardButton(text="💫Support",url="https://t.me/Universal_Blazer")]]))
+                                                InlineKeyboardButton(text="💫Support",url="https://t.me/BlazingSquad")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
