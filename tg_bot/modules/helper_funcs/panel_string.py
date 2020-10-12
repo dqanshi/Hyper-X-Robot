@@ -1,3 +1,5 @@
+from tg_bot import dispatcher, INTRO_IMG
+
 if INTRO_IMG is None:
     HYPER_X_IMG = "https://telegra.ph/file/e1e804f82a68529627555.jpg"
 else:
