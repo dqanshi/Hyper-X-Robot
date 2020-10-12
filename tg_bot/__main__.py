@@ -154,8 +154,7 @@ def send_start(bot, update):
 def m_connect_button(bot, update):
     bot.delete_message(update.effective_chat.id, update.effective_message.message_id)
     connect_button(bot, update)
-
-
+ 
 # for test purposes
 def error_callback(bot, update, error):
     try:
