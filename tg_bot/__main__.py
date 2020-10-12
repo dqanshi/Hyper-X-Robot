@@ -148,7 +148,7 @@ def send_start(bot, update):
     keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/BlazingSquad")]]
     keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username)),InlineKeyboardButton(text="♻️Owner",url="https://t.me/jrjaiden")]]
 
-    update.effective_message.reply_photo(HELP_PANEL_STRING.HYPER_X_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name),escape_markdown(INTRO_TXT), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo(HELP_PANEL_STRING.HYPER_X_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name), escape_markdown(INTRO_TXT)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
 
 def m_connect_button(bot, update):
