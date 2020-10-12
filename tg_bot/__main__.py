@@ -145,8 +145,8 @@ def send_start(bot, update):
     text += "\n𝗝𝗼𝗶𝗻 [𝗡𝗲𝘄𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗙𝗼𝗿 𝘂𝗽𝗱𝗮𝘁𝗲𝘀 𝗮𝗯𝗼𝘂𝘁 𝗺𝗲](https://t.me/universal_blazer)" 
     text += "\n\n «*{}*»"  
 
-    keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨","url=https://t.me/BlazingSquad")]]
-    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username),InlineKeyboardButton(text="♻️Owner","url=https://t.me/jrjaiden")]]
+    keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/BlazingSquad")]]
+    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username),InlineKeyboardButton(text="♻️Owner",url="https://t.me/jrjaiden")]]
 
     update.effective_message.reply_photo(HELP_PANEL_STRING.HYPER_X_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name),  INTRO_TXT ), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
