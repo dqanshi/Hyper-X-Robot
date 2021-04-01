@@ -21,5 +21,5 @@ Click below to deploy
 
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/santo-surviver/Hyper-X-Robot.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dqanshi/Hyper-X-Robot.git)
 
