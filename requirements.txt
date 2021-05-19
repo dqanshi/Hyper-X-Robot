@@ -28,7 +28,7 @@ tabulate
 parsel
 nekos.py
 telethon 
-Tgcripto
+tgcrypto
 Pyrogram
 git+https://github.com/dqanshi/python-markdown2.git
 apscheduler
