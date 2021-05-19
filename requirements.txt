@@ -26,3 +26,5 @@ pyowm
 tabulate
 parsel
 nekos.py
+telethon 
+Pyrogram
