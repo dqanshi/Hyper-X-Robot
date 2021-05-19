@@ -1,4 +1,4 @@
-#modificatins by Sur_vivor
+#modificatins by am_dq_fan
 import time
 import requests
 import json
@@ -8,8 +8,8 @@ from telegram import Message, Chat, Update, Bot, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import run_async
 
-from cinderella import dispatcher, updater, API_WEATHER
-from cinderella.modules.disable import DisableAbleCommandHandler
+from tg_bot import dispatcher, updater, API_WEATHER
+from tg_bot.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
