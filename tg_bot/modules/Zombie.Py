@@ -1,6 +1,13 @@
 import asyncio
 from telethon import events
 from cowpy import cow
+from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
+from telethon.tl.functions.channels import EditBannedRequest
+from telethon.tl.types import ChannelParticipantsAdmins, ChatBannedRights
+
+from tg_bot import telethn, DEV_USERS, SUDO_USERS, OWNER_ID,SUPPORT_USERS, TIGER_USERS
+
+
 
 @register(pattern=r"^/(\w+)say (.*)")
 async def univsaye(cowmsg):
