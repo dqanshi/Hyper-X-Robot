@@ -15,7 +15,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \
-    ALLOW_EXCL, TOKEN, INTRO_TXT
+    ALLOW_EXCL, TOKEN,INTRO_TXT
 from tg_bot.modules import ALL_MODULES
 from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
@@ -144,12 +144,12 @@ def send_start(bot, update):
     text = "𝐇𝐞𝐲 *{}* 𝒂𝒅𝒅 𝒎𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑"
     text += "\n𝙸𝚊𝚖 {} 𝚊𝚗 𝚙𝚛𝚘𝚏𝚏𝚎𝚜𝚜𝚒𝚘𝚗𝚊𝚕 𝚋𝚘𝚝"
     text += "\n𝗝𝗼𝗶𝗻 [𝗡𝗲𝘄𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗙𝗼𝗿 𝘂𝗽𝗱𝗮𝘁𝗲𝘀 𝗮𝗯𝗼𝘂𝘁 𝗺𝗲](https://t.me/BlazingSquad)" 
-    text += "\n\n «*{INTRO_TXT}*»"  
+    text += "\n\n «*{}*»"  
 
     keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/BlazingSquad")]]
-    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username)),InlineKeyboardButton(text="♻️Owner",url="https://t.me/jrjaiden")]]
+    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username)),InlineKeyboardButton(text="♻️Owner",url="https://t.me/am_dq_fan")]]
 
-    update.effective_message.reply_photo(HELP_PANEL_STRING.INTRO_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo(HELP_PANEL_STRING.INTRO_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name),INTRO_TXT), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
 
 def m_connect_button(bot, update):
